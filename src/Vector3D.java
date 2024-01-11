@@ -45,3 +45,4 @@ public class Vector3D {
         return new Vector3D(k * x, k * y, k * z);
     }
 }
+//apoihewrwe3qrqwerqwre
