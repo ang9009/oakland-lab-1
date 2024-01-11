@@ -16,3 +16,4 @@ Each lab will be graded on effort, so it is recommended to submit what you have 
 The lowest 2 lab grades over the semester will be dropped.
 
 If you need to miss class, please talk to your CS2511 Lab Leader about any missed material. We don't want you to come to class if you are sick!
+# lab-1-oakland
