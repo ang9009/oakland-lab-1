@@ -29,4 +29,19 @@ public class Vector3D {
         return Math.sqrt(x * x + y * y + z * z);
     }
 
+    public Vector3D normalize() {
+        double magnitude = getMagnitude();
+
+        if(magnitude == 0) throw new IllegalStateException("Magnitude is 0");
+
+        return new Vector3D(x / magnitude, y / magnitude, z / magnitude);
+    }
+
+    public Vector3D add(Vector3D otherVector) {
+        return new Vector3D(x + otherVector.getX(), y + otherVector.getY(), z + otherVector.getZ());
+    }
+
+    public Vector3D multiply(int k) {
+        return new Vector3D(k * x, k * y, k * z);
+    }
 }
