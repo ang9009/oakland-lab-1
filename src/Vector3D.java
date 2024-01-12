@@ -44,5 +44,26 @@ public class Vector3D {
     public Vector3D multiply(int k) {
         return new Vector3D(k * x, k * y, k * z);
     }
+
+    public double dotProduct(Vector3D v) {
+        return v.getX() * x + v.getY() * y + v.getZ() * z;
+    }
+
+    public double angleBetween(Vector3D v) {
+        double dotProduct = dotProduct(v);
+        double currMagnitude = getMagnitude();
+        double otherMagnitude = Math.sqrt(v.getX() * v.getX() + v.getY() * v.getY());
+
+        if(currMagnitude == 0 || otherMagnitude == 0) throw new IllegalStateException("Division by 0");
+
+        return Math.acos(dotProduct / (currMagnitude * otherMagnitude));
+    }
+
+    public Vector3D crossProduct(Vector3D v) {
+        double crossX = y * v.getZ() - z * v.getY();
+        double crossY = z * v.getX() - x * v.getZ();
+        double crossZ = x * v.getY() - y * v.getX();
+
+        return new Vector3D(crossX, crossY, crossZ);
+    }
 }
-//apoihewrwe3qrqwerqwre
